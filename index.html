@@ -1,73 +1,51 @@
 <!DOCTYPE html>
-<html lang="pt">
-
+<html lang="pt-br">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Verificação de Primeira Chamada</title>
-  <script async src="https://www.googletagmanager.com/gtag/js?id=G-5KKSTF13YL"></script>
-  <script>
-    window.dataLayer = window.dataLayer || [];
-    function gtag(){dataLayer.push(arguments);}
-    gtag('js', new Date());
-
-    gtag('config', 'G-5KKSTF13YL');
-  </script>
-  <script src="https://cdn.sheetjs.com/xlsx-0.20.3/package/dist/xlsx.full.min.js"></script>
-
+  <title>Página Inicial - Ganhe o Mundo</title>
   <link rel="stylesheet" href="style.css">
-  <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@300;400;600&display=swap" rel="stylesheet">
 </head>
-
 <body>
+  <div class="topo">
+    <img src="images/logo.png" alt="Logo Ganhe o Mundo" class="logo">
+    <div>
+      <a href="index.html">INÍCIO</a>
+      <a href="#">SOBRE</a>
+    </div>
+    <img src="images/flag.png" alt="Bandeira de Pernambuco" class="bandeira">
+  </div>
 
-  <header class="topo">
-    <img src="images/logo.png" alt="Logo PGM" class="logo">
-    <img src="images/flag.png" alt="Bandeira PE" class="bandeira">
-  </header>
-
-  <!-- Ondas -->
   <div class="onda">
     <svg viewBox="0 0 1440 100" xmlns="http://www.w3.org/2000/svg">
-      <!-- Quadrado azul cobrindo tudo com gambiarra -->
       <rect width="1440" height="70" fill="#0066cc"></rect>
-      <!-- Onda Vermelha -->
       <path fill="#FF3333" d="M0,40 C360,10 1080,70 1440,40 L1440,100 L0,100 Z"></path>
-      <!-- Onda Amarela -->
       <path fill="#FFCC33" d="M0,70 C360,40 1080,80 1440,70 L1440,100 L0,100 Z"></path>
-      <!-- Onda Verde -->
       <path fill="#33CC33" d="M0,90 C360,60 1080,90 1440,90 L1440,100 L0,100 Z"></path>
     </svg>
   </div>
 
-  <!-- Título abaixo das ondas -->
-  <div class="titulo-container">
-    <h1>Painel do Participante</h1>
-    <h2>Primeira Chamada Extraoficial PGM</h2>
+  <div class="banner">
+    <div class="texto-banner">
+      <h1>Descubra o seu futuro no exterior</h1>
+    </div>
   </div>
 
-  <main class="conteudo-container">
-    <div class="formulario-centralizado">
-
-      <form class="formulario" onsubmit="event.preventDefault(); verificarClassificacao();">
-        <label for="inscricao">Informe seu número de inscrição:</label>
-        <input type="text" id="inscricao" name="inscricao" required placeholder="Digite seu número de inscrição"
-          autocomplete="on">
-        <button type="submit">Verificar</button>
-
-        <p id="result"></p>
-      </form>
-
+  <div class="texto-chamada">
+    <h1>Confira sua aprovação</h1>   
+  </div>
+ 
+  <div class="secao-chamada">
+    <div class="botoes-chamada">
+      <a href="primeira-chamada.html" class="botao-chamada">1ª Chamada</a>
+      <a href="segunda-chamada.html" class="botao-chamada">2ª Chamada</a>
     </div>
-  </main>
+  </div>
 
   <footer>
-    <p>© João Victor Cosmo - ETE Porto Digital.<br>
+    <p>© João Victor Cosmo | Daniel Sena | Carlos Henrique - ETE Porto Digital.<br>
       Contato em joao.lima23@etepd.com
     </p>
   </footer>
-
-  <script src="main.js"></script>
 </body>
-
 </html>
