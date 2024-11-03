@@ -1,189 +1,308 @@
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-  }
-  
-  html, body {
-    height: 100%;
-  }
-  
-  body {
-    font-family: 'Raleway', sans-serif;
-    display: flex;
-    flex-direction: column;
-  }
-  
+  font-family: "Raleway", sans-serif;
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+html, body {
+  width: 100%;
+  overflow-x: hidden;
+  height: 100%;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+}
+
+.topo {
+  width: 100%;
+  background-color: #fff;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: nowrap;
+  padding: 10px 20px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  z-index: 1;
+}
+
+.logo {
+  width: 120px;
+}
+
+.bandeira {
+  width: 120px;
+}
+
+.topo a {
+  margin: 0 15px;
+  color: #333;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.topo a:hover {
+  color: #007bff;
+}
+
+.onda {
+  width: 100%;
+  height: auto;
+}
+
+.onda svg {
+  width: 100%;
+  height: auto;
+}
+
+.titulo-container {
+  text-align: center;
+  margin-top: -20px;
+  padding: 20px;
+}
+
+.titulo-container h1 {
+  font-size: 2.5rem;
+  color: #333;
+}
+
+.titulo-container h2 {
+  font-size: 1.5rem;
+  color: #666;
+  margin-top: 10px;
+}
+
+.conteudo-container {
+  padding: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 60vh;
+}
+
+.formulario-centralizado {
+  text-align: center;
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+  max-width: 700px;
+  width: 100%;
+}
+
+.formulario {
+  background-color: #f1f1f1;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.05);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 15px;
+}
+
+.formulario-centralizado .titulo-container {
+  margin: 0;
+  padding-bottom: 20px;
+}
+
+.formulario label {
+  display: block;
+  margin-bottom: 10px;
+  font-size: 1.2rem;
+  color: #333;
+}
+
+.formulario input[type="text"] {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 15px;
+  font-size: 1rem;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+.formulario button {
+  padding: 10px 20px;
+  font-size: 1.1rem;
+  font-weight: bold;
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.formulario button:hover {
+  background-color: #0056b3;
+}
+
+#result {
+  margin-top: 15px;
+  font-size: 1rem;
+  color: #333;
+}
+
+.banner {
+  position: relative;
+  width: 100%;
+  height: 300px;
+  overflow: hidden;
+  background-image: url('images/aviao-fundo.png');
+  background-position: center; 
+  background-size: cover;
+}
+
+.texto-banner {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: white;
+  text-align: center;
+  z-index: 1;
+}
+
+.texto-banner h1 {
+  font-size: 2.2rem;
+  font-weight: bold;
+  color: #ffffff;
+}
+
+.texto-chamada {
+  text-align: center;
+  padding: 20px;
+}
+
+.texto-chamada h1 {
+  color: #3063D1;
+  font-weight: bold;
+  font-size: 1.5rem;
+}
+
+.secao-chamada {
+  text-align: center;
+  padding: 30px 0;
+  background-color: #B0D2FD;
+}
+
+.botoes-chamada {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+}
+
+.botao-chamada {
+  display: block;
+  padding: 15px 30px;
+  background-color: #F9F9F9;
+  color: #3063D1;
+  text-decoration: none;
+  border-radius: 10px;
+  font-weight: bold;
+  font-size: 1.2rem;
+  transition: background-color 0.3s;
+}
+
+.botao-chamada:hover {
+  background-color: #0056b3;
+  color: white;
+}
+
+footer {
+  text-align: center;
+  background-color: #fff;
+  padding: 10px 0;
+  box-shadow: 0 -2px 10px rgba(0, 0, 0, 0.1);
+  font-size: 0.9rem;
+  color: #666;
+  margin-top: auto;
+}
+
+@media (max-width: 768px) {
   .topo {
-    width: 100%;
-    background-color: #fff;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    flex-wrap: nowrap; /* PARA AS LGOOS NÃO QUEBRAREM LINHA */
-    padding: 10px 20px;
-    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
-    z-index: 1;
+      flex-direction: column;
+      padding: 10px;
   }
-  
-  .logo {
-    width: 120px;
+
+  .topo .logo, .topo .bandeira {
+      height: 40px;
   }
-  
-  .bandeira {
-    width: 50px;
+
+  .titulo-container h1 {
+      font-size: 2rem;
   }
-  
-  .onda {
-    width: 100%;
-    height: auto;
-    margin-bottom: 0;
-    padding-top: 5px;
-    padding-bottom: 0;
+
+  .titulo-container h2 {
+      font-size: 1.2rem;
   }
-  
-  .titulo-container {
-    text-align: center;
-    margin-top: 20px;
-  }
-  
-  h1 {
-    font-size: 1.8rem;
-    color: #333;
-    font-weight: 600;
-    margin-bottom: 10px;
-  }
-  
-  h2 {
-    font-size: 1.2rem;
-    color: #007bff;
-    font-weight: 400;
-  }
-  
-  .conteudo-container {
-    display: flex;
-    flex: 1;
-    justify-content: center;
-    align-items: center;
-  }
-  
-  .formulario-centralizado {
-    text-align: center;
-    background-color: #fff;
-    padding: 20px;
-    border-radius: 10px;
-    box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
-    max-width: 700px;
-    width: 100%;
-  }
-  
-  .formulario {
-    background-color: #f1f1f1;
-    padding: 20px;
-    border-radius: 10px;
-    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.05);
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 15px;
-  }
-  
-  .formulario label {
-    font-size: 1rem;
-    margin-bottom: 10px;
-    color: #333;
-  }
-  
-  .formulario input {
-    width: 100%;
-    padding: 10px;
-    margin-bottom: 20px;
-    border: 1px solid #ccc;
-    border-radius: 8px;
-    font-size: 1rem;
-  }
-  
+
+  .formulario input[type="text"],
   .formulario button {
-    width: 100%;
-    padding: 10px;
-    background-color: #007bff;
-    color: white;
-    border: none;
-    border-radius: 8px;
-    font-size: 1.1rem;
-    cursor: pointer;
-    transition: background-color 0.3s;
-  }
-  
-  .formulario button:hover {
-    background-color: #0056b3;
-  }
-  
-  footer {
-    text-align: center;
-    background-color: #fff;
-    padding: 10px 0;
-    box-shadow: 0 -2px 10px rgba(0, 0, 0, 0.1);
-    font-size: 0.9rem;
-    color: #666;
-    margin-top: auto;
-  }
-  
-  /* Ajustes mínimos para manter o design em dispositivos móveis igual a merda do desktop */
-  @media (max-width: 768px) {
-    .topo {
-      padding: 10px 20px;
-      flex-direction: row; /* Mantém o alinhamento horizontal */
-    }
-  
-    .logo {
-      width: 120px; /* Mantém o tamanho da logo */
-    }
-  
-    .bandeira {
-      width: 50px; /* Mantém o tamanho da bandeira */
-    }
-  
-    .formulario input {
       font-size: 1rem;
-      padding: 10px;
-    }
-  
-    .formulario button {
-      font-size: 1.1rem;
-      padding: 10px;
-    }
-  
-    .onda {
-        padding-bottom: 20px; /* Ajuste para telas menores */
-    }
   }
-  
-  @media (max-width: 480px) {
-    .topo {
+
+  .banner {
+      height: 200px;
+  }
+
+  .texto-banner h1 {
+      font-size: 1.5rem;
+  }
+
+  .secao-chamada {
+      padding: 20px 0;
+  }
+
+  .botoes-chamada {
+      flex-direction: column;
+      gap: 15px;
+  }
+
+  .botao-chamada {
       padding: 10px 20px;
-      flex-direction: row; /* Mantém o alinhamento horizontal mesmo em telas menores */
-    }
-  
-    .logo {
-      width: 100px; /* Mantém o tamanho da logo */
-    }
-  
-    .bandeira {
-      width: 60px; /* Mantém o tamanho da bandeira */
-    }
-  
-    .formulario input,
-    .formulario button {
-      padding: 10px;
-      font-size: 1rem; /* Mantém o tamanho do texto e dos inputs */
-    }
-  
-    footer {
-      font-size: 0.9rem;
-    }
-  
-    .onda {
-        padding-bottom: 10px; /* Ajuste para telas de celular menores */
-    }
+      font-size: 1rem;
   }
+
+  .onda {
+      padding-bottom: 20px;
+  }
+}
+
+@media (max-width: 480px) {
+  .titulo-container h1 {
+      font-size: 1.8rem;
+  }
+
+  .titulo-container h2 {
+      font-size: 1rem;
+  }
+
+  .formulario input[type="text"] {
+      font-size: 0.9rem;
+  }
+
+  .formulario button {
+      font-size: 0.9rem;
+      padding: 8px 16px;
+  }
+
+  .banner {
+      height: 150px;
+  }
+
+  .texto-banner h1 {
+      font-size: 1.2rem;
+  }
+
+  footer {
+      font-size: 0.9rem;
+  }
+
+  .onda {
+      padding-bottom: 10px;
+  }
+}
